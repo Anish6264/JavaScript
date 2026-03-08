@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cntainer">
+        <h1>Quiz App</h1>
+        <div id="quiz-container">
+        <div id="question-container" class="hidden">
+            <h2 id="question-text"></h2>
+            <ul id="choices-list">
+                <!-- choices will be added here dynamically by javascript -->
+            </ul>
+            <button id="next-btn" class="hidden"> Next question</button>
+        </div>
+        <div id="result-container" class="hidden">
+            <h2>your score</h2>
+            <p id="score"></p>
+            <button id="restart-btn">Restart quiz</button>
+        </div>
+        <button id="start-btn">Start quiz</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

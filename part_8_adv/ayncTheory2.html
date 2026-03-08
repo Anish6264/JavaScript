@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>acync</title>
+</head>
+<body>
+   <h1>chai or java</h1>
+   <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+ const saydate= function(str){
+    
+    console.log(str,Date.now());
+}
+// const intervalid=setInterval(saydate,1000,"hi")
+// here the third parameter is "hi" and you take that parameter in function and name it as "str" and thn you print that in console
+let intervalid
+document.querySelector("#start").addEventListener("click",function(){
+   intervalid = setInterval(saydate,1000,"hi")  
+})
+
+document.querySelector("#stop").addEventListener("click",function(){
+ clearInterval(intervalid)
+  console.log("stop")
+})
+// here we have to define the intervalid at global scope 
+</script>
+</html>

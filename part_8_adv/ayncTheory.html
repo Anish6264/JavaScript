@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>acync</title>
+</head>
+<body>
+   <h1>chai or code</h1>
+   <button id="stop">stop</button>
+</body>
+<script>
+ setTimeout(function(){
+   console.log("anish")
+ },2000)
+// the function is called handler and the 2000 is time out time here function has not name and it will do your work only once 
+
+const syname=function(){
+   console.log("anish")
+ }
+ 
+ setTimeout(syname,2000) // here we give refernce not execute the function 
+
+const changetext=function(){
+    document.querySelector("h1").innerHTML="best js series"
+}
+
+const changeme=setTimeout(changetext,2000)
+
+
+document.querySelector("#stop").addEventListener("click",function(){
+   clearTimeout( changeme); // if we have to stop the event before it happens
+   console.log("stoped"); 
+})
+
+
+</script>
+</html>
+
+

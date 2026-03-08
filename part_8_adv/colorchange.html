@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color change</title>
+</head>
+<body>
+    <h1>we are going to change background colors contuniously</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+const randomcolor= function(){
+const hex="0123456789ABCDEF"
+console.log(typeof hex);
+let color="#"
+for(let i=0;i<6;i++){
+    color+=hex[Math.floor(Math.random()*16)]
+    // += in case of string means concatination
+}
+return color;
+
+}
+
+
+
+let interval;
+
+const startchangingcolor= function(){
+    if(interval==null){
+   interval= setInterval(()=>{
+        document.body.style.backgroundColor=randomcolor()
+    },100)
+}
+}
+
+const stopchangingcolor= function(){
+    clearInterval(interval)
+    interval=null;
+    // here we assign null because to write clean code means that it did not consume more memory in overwriting the interval
+}
+
+document.querySelector("#start").addEventListener("click",startchangingcolor)
+
+document.querySelector("#stop").addEventListener("click",stopchangingcolor)
+
+</script>
+</html>

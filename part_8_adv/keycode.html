@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+table,
+th,
+td{
+    border: 1px solid #e7e7e7;
+}
+
+.project{
+background-color: #1c1c1c;
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 100vh;
+}
+.color{
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+</style>
+<body>
+    <div class="project">
+        <div class="insert">
+    <div class="key">press key and watch magic</div>
+    </div>
+    </div>
+</body>
+<script>
+
+const insert=document.querySelector(".insert")
+
+window.addEventListener("keydown",(e) => {
+    // THE EVENT IN EVENTLISTNER IS E
+insert.innerHTML=`
+<div class="color">
+    <table>
+ <tr>
+   <th>Key</th>
+   <th>keycode</th>
+   <th>Code</th>
+ </tr>
+ <tr>
+   <td>${e.key=== " " ? "space" : e.key}    </td>
+   <td>${e.keyCode}</td> // these keycodes are in event e inside window inbuilt function.
+   <td>${e.Code}</td>
+ </tr>
+ 
+</table>
+    </div>`;
+});
+// here we addeventlistner on whole window because we want to press key so we can not select any specific element.
+</script>
+</html>

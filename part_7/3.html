@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit or remove DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langname){
+const listitem=document.createElement("li");
+listitem.innerHTML=(langname)
+document.querySelector(".language").
+appendChild(listitem)
+    }
+    addlanguage("python")
+    addlanguage("SQL")
+// this method is not much good for scaling so we are using differnt method
+
+function addoptilanguage(langname) {
+    const li=document.createElement("li")
+
+
+  li.appendChild(document.createTextNode(langname))
+
+   document.querySelector(".language").appendChild(li)
+}
+addoptilanguage("anish")
+
+
+// edit 
+
+const lang2=document.querySelector("li:nth-child(2)") // nth-child(2)  selects 2nd element 
+// lang2.innerHTML="asdfghj"
+const newli=document.createElement("li")
+newli.textContent="Anish"
+lang2.replaceWith(newli)
+
+// remove
+
+const lastlan=document.querySelector("li:last-child")
+lastlan.remove()
+
+
+
+</script>
+</html>

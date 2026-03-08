@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Youtube Add new element</title>
+</head>
+<body style="background-color: black;">
+    <div style="color: white;" class="parent">
+         <div class="day">Monday</div>
+         <div class="day">Tuesday</div>
+         <div class="day">Wednesday</div>
+         <div class="day">Sunday</div>
+    </div>
+</body>
+<script>
+   const parent= document.querySelector('.parent')
+  // console.log(parent)
+   // console.log(parent.children) // this will give an html collection
+  //  console.log(parent.children[0]) // this will give 0th element of that html collection because it is like array but not array
+   // console.log(parent.children[0].innerHTML) // give inner html of that element
+
+
+   /*for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    
+   }
+*/
+   parent.children[1].style.color="orange"
+
+//    console.log(parent.firstElementChild)
+//    console.log(parent.lastElementChild)
+
+  const day1= document.querySelector(".day")
+//   console.log(day1.parentElement);
+//   console.log(day1.nextElementSibling);
+
+console.log("NODES: ",parent.childNodes); // gives all nodes "enter,div,comments"
+
+
+</script>
+</html>
